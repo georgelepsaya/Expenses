@@ -1,8 +1,12 @@
-import React from "react";
+import { React, useState } from "react";
 
 import "./ExpensesFilter.css";
 
-const ExpensesFilter = () => {
+const ExpensesFilter = (props) => {
+  const [filterDate, setFilterDate] = useState("2022");
+
+  props.onSelectDate();
+
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
